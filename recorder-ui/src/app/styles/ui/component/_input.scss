@@ -1,0 +1,60 @@
+/*search Input*/
+.search {
+  width: 150px;
+  height: 40px;
+  position: relative;
+
+  .fa {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    z-index: 1;
+    cursor: pointer;
+    opacity: .5;
+    color: $btn-primary-bg;
+  }
+
+  input, .fa {
+    transition-duration: .3s;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-indent: 15px;
+    height: 40px;
+    z-index: 2;
+    outline: none;
+    color: #999;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition-timing-function: cubic-bezier(.3, 1.5, .6, 1);
+
+    &:focus {
+      color: #333;
+      border-color: #eeeeee;
+      width: 150%;
+
+      & ~ .fa {
+        opacity: 1;
+        z-index: 3;
+        color: $btn-primary-bg;
+      }
+    }
+  }
+
+}
+
+.form-control{
+  box-shadow:none;
+}

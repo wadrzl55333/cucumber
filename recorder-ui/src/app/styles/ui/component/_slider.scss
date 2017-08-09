@@ -1,0 +1,74 @@
+$height: 8px;
+slider, [slider] {
+  display: inline-block;
+  position: relative;
+  height: $height;
+  width: 100%;
+  margin:5px 0px;
+  vertical-align: middle;
+
+  div {
+    white-space: nowrap;
+    position: absolute;
+
+    &.bar {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      background: #f2efeb;
+      overflow: hidden;
+
+      .selection {
+        width: 0%;
+        height: 100%;
+        background: #b79b69;
+      }
+
+    }
+
+    &.handle {
+      cursor: pointer;
+      width: 24px;
+      height:24px;
+      top: -8.5px;
+      background-color:#fff;
+      border:1px solid  #b79b69;
+      z-index: 2;
+      border-radius: 100%;
+
+//      &:after {
+//        content: '';
+//        background-color: #b79b69;
+//        width: 8px;
+//        height: 8px;
+//        position: absolute;
+//        top: 6px;
+//        left: 6px;
+//        border-radius: 100%;
+
+//        &:hover {
+//          background-color: #000;
+//        }
+//      }
+
+      &.active:after {
+        background-color: #fff;
+      }
+    }
+
+    &.bubble {
+      display: none;
+      cursor: default;
+      top: -26px;
+      padding: 1px 3px 1px 3px;
+      font-size: 12px;
+      &.active {
+        display: inline-block;
+      }
+
+      &.limit {
+        color: #777;
+      }
+    }
+  }
+}

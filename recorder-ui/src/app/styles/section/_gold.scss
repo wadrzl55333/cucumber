@@ -1,0 +1,103 @@
+﻿.skin-gold{
+  .nav-wrapper {
+    background:#49443D;
+    border-right: 1px solid #151515;
+    .logo {
+     /* border-bottom: 1px solid #84765c;*/
+    }
+  }
+  #navDiv .nav {
+    > li {
+      &:first-child > a {
+        border-top: 0;
+        margin-top: 0px;
+      }
+      > a {
+        color: #BFB7AD;
+        > .fa, .glyphicon {
+//          color: #c6c5c3;
+
+        }
+        &:hover,
+        &:focus {
+//          color: #ffffff;
+
+          > .fa, .glyphicon {
+//            color: #ffffff;
+          }
+        }
+
+        }
+      }
+
+      &.active {
+        a {
+          background: #ffffff;
+          color:#49443D;
+
+          > .fa, .glyphicon {
+            color: #ffffff;
+          }
+        }
+      }
+    > li.submenuOpen {
+      > a {
+          background: #84765c;
+          color:#fff;
+
+          > .fa, .glyphicon {
+            color: #ffffff;
+          }
+        }
+
+      }
+
+    }
+
+    .open > a {
+      &,
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: #84765c;
+        background-color: #f0e6cd;
+        > .fa, .glyphicon {
+          color: #ffffff;
+        }
+      }
+
+    }
+
+    // sub menu
+    ul.sub-menu {
+      background: #84765c;
+      a {
+        color:#e3e1cc;
+        i{
+          margin-right: 5px;
+        }
+
+        &:hover,
+        &:active,
+        &.active {
+          text-decoration: none;
+          color: #f0e6cd;
+        }
+      }
+
+      li {
+        &:hover,
+        &.active {
+          background-color:#ddd4b0;
+          a{
+            color: #84765c;
+          }
+        }
+      }
+    }
+  .badge{
+   background: #84765c;
+  }
+  }
+
+

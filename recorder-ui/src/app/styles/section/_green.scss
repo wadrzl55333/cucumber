@@ -1,0 +1,175 @@
+﻿
+.skin-green{
+  background-color: #e2e6dd;
+  padding-top: 46px;
+  .btn-primary{
+    background-color: #326b44;
+    border-color: #215029;
+    &:hover{
+      background-color: #296433;
+      border-color: #275e30;
+    }
+  }
+  .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active{
+    background-color: #8bab95;
+    border-color: #8bab95;
+  }
+  .label-primary {
+    background-color: #326b44;
+    border-color: #215029;
+  }
+
+  .nav-wrapper {
+    background: #1f2621;
+    border-right: 1px solid #438f4e;
+    .logo {
+      border-bottom: 1px solid #1e4023;
+      line-height: 70px;
+      img{
+        filter: hue-rotate(90deg) brightness(150%);
+        -webkit-filter: hue-rotate(90deg) brightness(150%);
+        -moz-filter: hue-rotate(90deg) brightness(150%);
+        -o-filter: hue-rotate(90deg) brightness(150%);
+        -ms-filter: hue-rotate(90deg) brightness(150%);
+      }
+    }
+
+  }
+  #navDiv .nav {
+    > li {
+      &:first-child > a {
+        border-top: 0;
+        margin-top: 0px;
+      }
+      &.active{
+        a,a:hover{
+          background-color: #1f3e1f;
+        }
+        li a{
+          font-size: 12px;
+        }
+        li.active a{
+          background-color: #438f4e;
+          color: #fff;
+        }
+      }
+      &.submenuOpen{
+        a{
+          background-color: #397239;
+        }
+        a:hover{
+          background-color: #397239;
+        }
+      }
+      > a {
+        color: lighten(#438f4e, 50%);
+        padding: 6px 5px 6px 20px;
+        font-size: 13px;
+        border-bottom: 1px solid #0f2112;
+        > .fa, .glyphicon {
+          color: #c6c5c3;
+
+        }
+        &:hover,
+        &:focus {
+          color: #ffffff;
+          background-color: #4a9d56;
+
+          > .fa, .glyphicon {
+            color: #ffffff;
+          }
+        }
+        }
+      }
+
+      &.active {
+        a {
+          color: #ffffff;
+          background-color: #397239;
+
+          > .fa, .glyphicon {
+            color: #ffffff;
+          }
+        }
+      }
+
+
+    .open > a {
+      &,
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #438f4e;
+        > .fa, .glyphicon {
+          color: #ffffff;
+        }
+      }
+    }
+
+    // sub menu
+    ul.sub-menu {
+      background: #397239;
+      a {
+        color:#e3e1cc;
+        i{
+          margin-right: 5px;
+        }
+
+        &:hover,
+        &:active,
+        &.active {
+          text-decoration: none;
+          color: #d9f0d3;
+        }
+      }
+
+      li {
+        padding: 0px;
+        a{
+          padding: 0 10px;
+          transition: all 0.5s;
+        }
+        a:hover{
+          color: #eaebd9;
+          border-right: #54be6c 5px solid;
+          background-color: #418241;
+        }
+        &.active a{
+          color: #ceebd4;
+          border-right: #90be7b 5px solid;
+          background-color: #54be6c;
+        }
+      }
+    }
+  }
+ .badge{
+  background: #4dac61;
+ }
+  .comm-header{
+    height:36px;
+    line-height: 36px;
+    .comm-top-left h1{
+      height: 36px;
+      line-height: 36px;
+      font-size: 16px;
+
+    }
+  }
+  .comm-top-right li{
+    height: 36px;
+    line-height: 36px;
+    a{
+      color: #324a35;
+      &:hover{
+        color: #36713c;
+      }
+    }
+  }
+  .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+    background: #397239;
+    border-color: #397239;
+  }
+}
+
+

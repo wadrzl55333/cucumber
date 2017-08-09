@@ -1,0 +1,91 @@
+﻿
+.skin-blue{
+  .nav-wrapper {
+    background:#4375be;
+    border-right: 1px solid #151515;
+    .logo {
+      border-bottom: 1px solid #5889cc;
+    }
+  }
+  #navDiv .nav {
+    > li {
+      &:first-child > a {
+        border-top: 0;
+        margin-top: 20px;
+      }
+      > a {
+        color: lighten(#4375be, 50%);
+        > .fa, .glyphicon {
+          color: #c6c5c3;
+
+        }
+        &:hover,
+        &:focus {
+          color: #ffffff;
+          background-color: #5889cc;
+
+          > .fa, .glyphicon {
+            color: #ffffff;
+          }
+        }
+        }
+      }
+
+      &.active {
+        a {
+          color: #ffffff;
+          background-color: #1a3a69;
+
+          > .fa, .glyphicon {
+            color: #ffffff;
+          }
+        }
+      }
+
+    }
+    .open > a {
+      &,
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #1a3a69;
+        > .fa, .glyphicon {
+          color: #ffffff;
+        }
+      }
+    }
+
+    // sub menu
+    ul.sub-menu {
+      background: #1a3a69;
+      a {
+        color:#e3e1cc;
+        i{
+          margin-right: 5px;
+        }
+
+        &:hover,
+        &:active,
+        &.active {
+          text-decoration: none;
+          color: #f0e6cd;
+        }
+      }
+
+      li {
+        &:hover,
+        &.active {
+          color: #c7d6eb;
+          background-color: #10284a;
+        }
+      }
+    }
+
+ .badge{
+  background: #5889cc;
+ }
+
+  }
+
+

@@ -1,0 +1,4 @@
+{
+  "TEST": "测试",
+  "WITH_STRING_EXPRESSION": "这里包含了一个表达式，可以通过translate-values属性来传值{{param1}}, {{param2}}"
+}

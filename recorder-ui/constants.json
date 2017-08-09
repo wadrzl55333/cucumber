@@ -1,0 +1,10 @@
+{
+  "dev": {
+    "LOCALE": "zh_CN",
+    "DEBUG": true
+  },
+  "production": {
+    "LOCALE": "zh_CN",
+    "DEBUG": false
+  }
+}

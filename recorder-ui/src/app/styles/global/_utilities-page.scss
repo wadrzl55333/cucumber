@@ -1,0 +1,330 @@
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+ background: transparent;
+  color:#010101;
+}
+.dark-primary{
+  background-color: #49443D !important;
+}
+//background color
+.bg-primary{
+  background: lighten($brand-primary, 35%) !important;
+  color:$text-color;
+}
+.bg-success, .bg-green{
+  background: lighten($brand-success, 35%) !important;
+}
+.bg-danger, .bg-red{
+  background: lighten($brand-danger, 35%) !important;
+}
+.bg-info, .bg-blue{
+  background: lighten($brand-info, 35%) !important;
+}
+.bg-warning, .bg-yellow{
+  background: lighten($brand-warning, 35%) !important;
+}
+.bg-white{
+  background: #ffffff !important;
+}
+.bg-muted{
+  background: #F5F5F5  !important;
+}
+.text-white{
+  color: #ffffff !important;
+}
+.bold{
+  font-weight: bold;
+}
+.text-left{
+  text-align: left !important;
+}
+.text-right{
+  text-align: right !important;
+}
+.font-bold{
+  font-weight: bold;
+}
+.font-12{
+  font-size: 12px !important;
+}
+.font-13{
+  font-size: 13px !important;
+}
+.font-14{
+  font-size: 14px !important;
+}
+.font-16{
+  font-size: 16px !important;
+}
+.font-18{
+  font-size: 18px !important;
+}
+//
+// Utility classes
+// --------------------------------------------------
+.no-padding {
+ padding: 0px !important;
+}
+
+.no-margin {
+ margin: 0px !important;
+}
+
+.spacing-bottom{
+ margin-bottom:30px;
+}
+
+.v-align-bottom{
+ vertical-align: bottom;
+}
+.v-align-top{
+ vertical-align: top;
+}
+.v-align-middle{
+ vertical-align: middle;
+}
+
+.no-padding {
+ padding: 0px !important;
+}
+.no-margin {
+ margin: 0px !important;
+}
+.padding-5{
+ padding:5px;
+}
+.padding-10{
+ padding:10px;
+}
+.padding-20{
+ padding:20px;
+}
+.padding-30{
+ padding:30px;
+}
+/** Padding top **/
+.p-t-5{
+  padding-top:5px !important;
+}
+.p-t-7{
+  padding-top:7px !important;
+}
+.p-t-8{
+  padding-top:8px !important;
+}
+.p-t-10{
+  padding-top:10px !important;
+}
+.p-t-10{
+ padding-top:10px;
+}
+.p-t-20{
+ padding-top:20px;
+}
+.p-t-30{
+ padding-top:30px;
+}
+.p-t-40{
+ padding-top:40px;
+}
+.p-t-50{
+ padding-top:50px;
+}
+.p-t-60{
+ padding-top:60px;
+}
+/** Padding Bottom **/
+.p-b-10{
+ padding-bottom:10px;
+}
+.p-b-20{
+ padding-bottom:20px;
+}
+.p-b-30{
+ padding-bottom:30px;
+}
+.p-b-40{
+ padding-bottom:40px;
+}
+.p-b-50{
+ padding-bottom:50px;
+}
+.p-b-60{
+ padding-bottom:60px;
+}
+/** Padding Left **/
+.p-l-10{
+ padding-left:10px;
+}
+.p-l-20{
+ padding-left:20px;
+}
+.p-l-30{
+ padding-left:30px;
+}
+.p-l-40{
+ padding-left:40px;
+}
+.p-l-50{
+ padding-left:50px;
+}
+.p-l-50{
+ padding-left:50px;
+}
+.p-l-60{
+ padding-left:60px;
+}
+/** Padding Right **/
+.p-r-10{
+ padding-right:10px;
+}
+.p-r-20{
+ padding-right:20px;
+}
+.p-r-30{
+ padding-right:30px;
+}
+.p-r-40{
+ padding-right:40px;
+}
+.p-r-50{
+ padding-right:50px;
+}
+.p-r-60{
+ padding-right:60PX;
+}
+
+/** Margins **/
+.margin-10{
+ margin:10px;
+}
+.margin-20{
+ margin:20px;
+}
+.margin-30{
+ margin:30px;
+}
+/** Margin top **/
+.m-t-5{
+ margin-top:5px;
+}
+.m-t-10{
+ margin-top:10px;
+}
+.m-t-20{
+ margin-top:20px;
+}
+.m-t-30{
+ margin-top:30px;
+}
+.m-t-40{
+ margin-top:40px;
+}
+
+/** Margin Bottom **/
+.m-b-5{
+ margin-bottom:5px;
+}
+.m-b-10{
+ margin-bottom:10px;
+}
+.m-b-20{
+ margin-bottom:20px;
+}
+.m-b-30{
+ margin-bottom:30px;
+}
+.m-b-40{
+ margin-bottom:40px;
+}
+
+/** Margin Left **/
+.m-l-5{
+ margin-left:5px;
+}
+.m-l-10{
+ margin-left:10px;
+}
+.m-l-20{
+ margin-left:20px;
+}
+.m-l-30{
+ margin-left:30px;
+}
+.m-l-40{
+ margin-left:40px;
+}
+
+/** Padding Right **/
+.m-r-5{
+ margin-right:5px;
+}
+.m-r-10{
+ margin-right:10px;
+}
+.m-r-20{
+ margin-right:20px;
+}
+.m-r-30{
+ margin-right:30px;
+}
+.m-r-40{
+ margin-right:40px;
+}
+
+
+.inline{
+ display:inline-block !important;
+}
+
+
+// Floats
+// -------------------------
+
+//.clearfix {
+//  @include clearfix;
+//}
+//.center-block {
+//  @include center-block;
+//}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+//.text-hide {
+//  @include text-hide;
+//}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}

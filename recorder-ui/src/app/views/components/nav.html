@@ -1,0 +1,67 @@
+<div class="nav-wrapper" id="navDiv">
+  <h3 class="logo">
+    <img src="assets/images/chinacloud.png" width="140px"/>
+  </h3>
+
+  <div>
+    <ul  ng-if="!webb" class="nav" >
+
+      <li data-ng-class="{'active': $state.includes('{{m.href}}')|| $state.includes('{{m.activeState}}')}" data-ng-repeat="m in testMenu " >
+        <a data-ng-click="navToState(m.href)" data-collapse-nav state-go="{{m.href}}">
+          <i class="fa {{m.icon}}"  tooltip="{{m.caption}}"></i>
+          <span class="title">{{m.caption}} </span>
+          <span class="pull-right glyphicon glyphicon-chevron-right" data-ng-hide="!m.submenu"></span>
+        </a>
+        <ul class="sub-menu" data-ng-class="{'hidden': ! m.submenu}">
+          <li data-ng-repeat="s in m.submenu"  data-ng-class="{'active': $state.includes('{{s.href}}')}">
+            <a data-ng-click="$state.go(s.href)" data-ng-class="{'active': $state.includes('{{m.href}}')|| $state.includes('{{m.activeState}}')}"> <i class="glyphicon {{s.icon}}"></i> <span class="title">{{s.caption}}</span></a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+    <ul  ng-if="webb" class="nav"  wbui-nav>
+      <li ui-sref-active="active" data-ng-repeat="m in testMenu " >
+        <a  ui-sref="{{m.href}}">
+      <span class="pull-right " ng-if="m.submenu.length>0">
+        <i class="fa fa-fw fa-caret-down "></i>
+      </span>
+          <i class="fa {{m.icon}}"  tooltip="{{m.caption}}"></i>
+          <span >{{m.caption}}</span>
+        </a>
+        <ul class="nav nav-sub dk">
+          <li data-ng-class="{'active': $state.includes('{{s.href}}')}" data-ng-repeat="s in m.submenu" >
+            <a ui-sref="{{s.href}}" >
+              <span>{{s.caption}}</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="navswitch">
+    <a class="fa fa-arrows-h " onclick="changeNavW();"></a>
+    <script>
+      //菜单宽度切换
+      var navstatus=0;
+      var menustatus=0;
+      function changeNavW(){
+        var ow=$('#navDiv').width();
+
+        if(ow>150){
+          $('#navDiv').css('width','60px');
+          $('body').css('padding-left','80px');
+          $('.comm-top-left').css('padding-left','80px');
+          navstatus=1;
+        }else{
+          $('#navDiv').css('width','200px');
+          $('body').css('padding-left','220px');
+          $('.comm-top-left').css('padding-left','220px');
+          navstatus=0;
+        }
+      }
+    </script>
+  </div>
+</div>
+  <div></div>

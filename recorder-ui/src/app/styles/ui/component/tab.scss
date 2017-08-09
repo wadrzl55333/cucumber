@@ -1,0 +1,25 @@
+
+
+.accordionTab{
+  .panel-default{
+    border: 0px #eeeeee solid;
+    border-shadow: none;
+    background: #eee;
+
+  }
+  .panel-body{
+    padding: 0px;
+    background: #f8f8f8;
+  }
+  .table{
+    margin-bottom: 10px;
+  }
+  .panel-heading {
+    border-bottom: 0;
+
+    + .panel-collapse > .panel-body,
+    + .panel-collapse > .list-group {
+      border-top: 0px solid $panel-inner-border;
+    }
+  }
+}

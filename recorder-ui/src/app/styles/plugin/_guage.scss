@@ -1,0 +1,68 @@
+.chart-gauge {
+  width: 180px;
+  height: 110px;
+  margin: 0 auto;
+  display: inline-block;
+  float: left;
+}
+
+.chart-color1 {
+  fill: lighten($brand-success, 20%);
+}
+
+.chart-color2 {
+  fill: lighten($brand-success, 10%);
+}
+
+.chart-color3 {
+  fill: $brand-success;
+}
+
+.chart-color4 {
+  fill: darken($brand-success, 10%);
+
+}
+
+.chart-color5 {
+  fill: lighten($brand-warning, 10%);
+
+}
+
+.chart-color6 {
+  fill: $brand-warning;
+}
+
+.chart-color7 {
+  fill: darken($brand-warning, 5%);
+}
+
+.chart-color8 {
+  fill: $brand-danger;
+}
+
+.chart-color9 {
+  fill: darken($brand-danger, 5%);
+}
+
+.chart-color0 {
+  fill: darken($brand-danger, 10%);
+}
+
+.needle,
+.needle-center {
+  fill: #aaaaaa;
+}
+
+.guage {
+  width: 100px;
+  margin: 10px auto;
+}
+
+.guageIcon {
+  font-size: 22px;
+  position: absolute;
+  width: 90%;
+  text-align: center;
+  line-height: 118px;
+}
+

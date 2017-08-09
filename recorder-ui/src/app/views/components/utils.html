@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>标题字体</h3>
+  </div>
+  <div class="col-md-12">
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题，通常用于页面内容区域中，作为页面内容大标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+  </div>
+  <div class="col-md-12">
+    <h3>注册验证</h3>
+  </div>
+  <div class="col-md-12">
+
+    <div class="col-xs-4">
+      <form class="form-horizontal" name="myForm">
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="email" data-ng-model="form.email" placeholder="Email" required>
+          </div>
+          <div data-ng-messages="myForm.email.$error" data-ng-messages-include="app/views/components/messages.html" class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">昵称</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="name" data-ng-model="form.name" data-ui-validate="{unique: 'validateName($value)'}" placeholder="昵称，输入test会冲突" required>
+          </div>
+          <div data-ng-messages="myForm.name.$error" data-ng-messages-include="app/views/components/messages.html" class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">密码</label>
+          <div class="col-sm-10">
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              data-ng-model="form.password"
+              placeholder="输入密码"
+              required>
+          </div>
+          <div data-ng-messages="myForm.password.$error" data-ng-messages-include="app/views/components/messages.html" class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">重复密码</label>
+          <div class="col-sm-10">
+            <input
+              type="password"
+              class="form-control"
+              name="confirm_password"
+              data-ng-model="password"
+              data-ui-validate="{confirm_password: '$value === form.password'}"
+              data-ui-validate-watch=" 'form.password' "
+              placeholder="再输入一次密码"
+              required>
+          </div>
+          <div data-ng-messages="myForm.confirm_password.$error" data-ng-messages-include="app/views/components/messages.html" class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" data-ng-class="{disabled: !myForm.$valid}">注册</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

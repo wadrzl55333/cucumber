@@ -1,0 +1,22 @@
+<h1>angular-ui-notification demo</h1>
+<p><button ng-click="success()" class="btn btn-success">Success</button></p>
+<p><button ng-click="error()" class="btn btn-danger">Error</button></p>
+<h1>ccNotify demo</h1>
+<p><button ng-click="success2()" class="btn btn-success">Success</button></p>
+<p><button ng-click="error2()" class="btn btn-danger">Error</button></p>
+<h1>ccLoading demo</h1>
+<p><button ng-click="ccLoadingClick1()" class="btn btn-danger" id="bt1">Loading按钮</button></p>
+<p><button ng-click="ccLoadingClick2()" class="btn btn-success">Loading结束</button></p>
+<p><button ng-click="ccLoadingClick3()" class="btn btn-danger">更改Loading区域中的提示文字</button></p>
+ <div style="border:1px solid #999999; height: 100px;" class="dataArea">
+  <p>数据区域</p>
+   <p>{{test_txt.text}}</p>
+   <p>{{testLoadingData[0].text}}</p>
+</div>
+  <div>
+    <input type="text" ng-model="test_txt.text">
+  </div>
+<p><button ng-click="ccLoadingClick4()" class="btn btn-black">加载失败</button></p>
+<div style="border:1px solid #999999; " class="dataArea">
+  <p>数据区域</p>
+</div>

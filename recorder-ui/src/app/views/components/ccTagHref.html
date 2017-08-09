@@ -1,0 +1,133 @@
+<h3>WIKI-Page</h3>
+
+    <div class="wikidoc">
+      <div class="wikidoc-con">
+        <div class="panel">
+          <div class="panel-body">
+        <div class="panel-group" id="accordion" >
+
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+
+              <h4 class="panel-title"  id="ccTag1">
+                概述
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <p>华云应用监控提供了服务器、中间件、数据库等基础应用堆栈的监控，并且您还可以通过开发插件的监控您的业务系统，上报您的业务数据，并在该页面配置展示。</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default" id="ccTag2">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                插件开发步骤
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <p>插件可以用任何语言开发，但需要遵守</p>
+                <h4  id="ccTag3">约定</h4>
+                <ul>
+                  <li>进程退出返回0，表示成功，输出为数据；</li>
+                  <li>进程退出返回1，表示警告，输出为警告消息；</li>
+                  <li>进程退出返回2，表示错误，输出为错误消息；</li>
+                  <li>
+                    输出格式：
+                  <pre>
+        [
+          {
+            "key": "people.lost", # 监控名称，键，标示符，命名格式：监控对象.监控项
+            "value": $people_lost, # 值
+            "value_type": "integer", # 值类型，可选项：integer, string, floating, timestamp
+          }
+        ]
+                  </pre>
+                  </li>
+                </ul>
+                <p>输出必须是合法的JSON格式</p>
+                <p>
+                  key格式为：{measurement}.{metric}，例如：people.lost，层级以小数点（.）分隔。
+                  value_type主要目的为方便前端展示和告警阀值设置，可选项：integer，floating，long，string，timestamp
+                </p>
+                <p>
+                  警告或错误直接输出错误消息，即字符串，但必须指定退出码：1警告，2以上错误
+                </p>
+                <a href=""  id="ccTag4">参考示例</a>
+                <pre>
+        #!/bin/bash
+        output=`curl http://mydomain.com/people/lost`
+        # rest api: http://mydomain.com/people/lost return lost peple
+        #
+        # output:
+        # [
+        #   {
+        #      "key": "redis.memory_used",
+        #      "value": $memory_used,
+        #      "value_type": "integer"
+        #    }
+        # ]
+        echo $output
+        exit $? # exit 0 if curl success
+
+                </pre>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title"  id="ccTag5">
+                <!--<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">-->
+                插件部署步骤
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+
+                <h4>拷贝插件到监控目标主机(注意：请确保该主机已被监控)</h4>
+                <h4>配置脚本</h4>
+                <p>在监控目标主机创建运行配置脚本</p>
+                <p>示例:/etc/sensu/conf.d/redis_memory.json</p>
+                <pre>
+        {
+          "checks": {
+            "redis_memory": {
+              "type": "metric",
+              "handlers": ["customized_influxdb"],
+              "command": "/bin/bash /etc/sensu/plugins/redis_memory.sh",
+              "standalone": true,
+              "interval": 30
+            }
+          }
+        }
+                </pre>
+                <h4>重启监控客户端</h4>
+                <p>需要重启监控客户端载入新的配置</p>
+                <pre>$sudo /etc/init.d/sensu-client restart</pre>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <h3  id="ccTag6">完成插件开发部署后：单击 <button class="btn btn-warning" href="#addChartForm" slide-win-in><i class="fa fa-plus m-r-10"></i>新建自定义监控图表 </button> 开始创建图表</h3>
+        </div>
+      </div>
+      </div>
+      <div class="wikidoc-catalog">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-warning"><strong>目录</strong></li>
+          <li class="list-group-item"><a cc-tag-href="ccTag1" cc-tag-offset-y="60">概述</a> </li>
+          <li class="list-group-item"><a cc-tag-href="ccTag2" cc-tag-offset-y="60">插件开发步骤</a> </li>
+          <li class="list-group-item"><a cc-tag-href="ccTag3" cc-tag-offset-y="60">&nbsp;&nbsp;&nbsp;&nbsp;约定</a> </li>
+          <li class="list-group-item"><a cc-tag-href="ccTag4" cc-tag-offset-y="60">&nbsp;&nbsp;&nbsp;&nbsp;参考示例</a> </li>
+          <li class="list-group-item"><a cc-tag-href="ccTag5" cc-tag-offset-y="60">插件部署步骤</a> </li>
+          <li class="list-group-item"><a cc-tag-href="ccTag6" cc-tag-offset-y="60">创建监控图表</a> </li>
+        </ul>
+      </div>
+
+</div>

@@ -1,0 +1,4 @@
+{
+  "TEST": "Test",
+  "WITH_STRING_EXPRESSION": "There'is a expression here，you can pass a {{param1}}, {{param2}} here via an attribute named translate-values"
+}

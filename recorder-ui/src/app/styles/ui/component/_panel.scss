@@ -1,0 +1,148 @@
+.panel-heading{
+  padding: 5px 15px;
+  h4{
+    color: #010101;
+    margin: 0px;
+    line-height: 26px;
+  }
+}
+.panel{
+  box-shadow: none;
+}
+.panel.light-blue, .panel.light-blue {
+ border-top: #bfd5fa 4px  solid;
+ .panel-heading{
+  border-bottom: 1px solid #eeeeee;
+ }
+}
+.panel.blue, .panel.blue {
+ border-top: #58acf3 4px  solid;
+ .panel-heading{
+  border-bottom: 1px solid #eeeeee;
+ }
+}
+.panel.red, .panel.red {
+ border-top: #f35958 4px  solid;
+ .panel-heading{
+  border-bottom: 1px solid #eeeeee;
+ }
+}
+.panel.yellow, .panel.yellow {
+ border-top: #ffb848 4px  solid;
+ .panel-heading{
+  border-bottom: 1px solid #eeeeee;
+ }
+}
+.panel.green, .panel.green {
+ border-top: #0aa699 4px  solid;
+ .panel-heading{
+  border-bottom: 1px solid #eeeeee;
+ }
+}
+.panel.purple, .panel.purple {
+ border-top: #852b99 4px  solid;
+ .panel-heading{
+  border-bottom: 1px solid #eeeeee;
+ }
+}
+.panel.light-grey, .panel.light-grey {
+ border-top: #fafafa 4px  solid;
+ .panel-heading{
+  border-bottom: 1px solid #eeeeee;
+ }
+}
+.panel.dark-grey, .panel.dark-grey {
+ border-top: #555555 4px  solid;
+ .panel-heading{
+  border-bottom: 1px solid #eeeeee;
+ }
+}
+
+/*dashboard widget*/
+
+.dashboard-widget-area {
+ margin: 10px 0 30px;
+ min-height: 200px;
+}
+.widget-container {
+ float: left;
+ display: inline-block;
+ width: 33%;
+ padding-bottom: 1em;
+}
+.widget {
+ margin: 0 1em 0 0;
+ background-color: white;
+  border: 0px solid #444;
+ border-radius: 5px;
+ position: relative;
+ height: 100%;
+}
+.widget-header {
+ overflow: hidden;
+}
+.widget-header .label {
+ display: inline-block;
+ vertical-align: middle;
+}
+.widget-header .glyphicon {
+
+ cursor: pointer;
+ float: right;
+ opacity: 0.5;
+ font-size:12px;
+ margin:8px 10px 0px 0px;
+}
+.widget-header .glyphicon:hover {
+ opacity: 1;
+}
+.widget-header .widget-title {
+ vertical-align: middle;
+ font-weight: normal;
+}
+.widget-header form.widget-title {
+ display: inline;
+}
+.widget-header form.widget-title input.form-control {
+ width: auto;
+ display: inline-block;
+}
+.widget-content {
+ overflow: hidden;
+}
+.widget .widget-ew-resizer {
+ position: absolute;
+ width: 5px;
+ right: -2px;
+ height: 100%;
+ top: 0;
+ cursor: ew-resize;
+}
+.widget .widget-s-resizer {
+ cursor: ns-resize;
+ height: 5px;
+ width: 100%;
+ bottom: -7px;
+ left: 0;
+}
+.widget .widget-resizer-marquee {
+ box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 2;
+}
+.remove-layout-icon {
+ vertical-align: text-top;
+ cursor: pointer;
+ opacity: 0.3;
+}
+.remove-layout-icon:hover {
+ opacity: 1;
+}
+.layout-title {
+ display: inline-block;
+}
+.panel-default > .panel-heading{
+  border-bottom: 2px solid darken(#FCFBFA, 2%);
+}

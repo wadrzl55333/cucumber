@@ -1,0 +1,40 @@
+﻿#ccNotifyDiv{
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  background: #666;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition:all 0.5s;
+  .icobtn{
+    color: #fff;
+  }
+  &.show_o{
+    opacity:1;
+    bottom: 0;
+  }
+  &.hide_o{
+    opacity:0;
+    bottom: -40px;
+  }
+  &.cc_success{
+    background: #2b542c;
+  }
+  &.cc_error{
+    background:#dd0000;
+  }
+  &.cc_info{
+    background:#0059bc;
+  }
+  &.cc_notice{
+    background:#f0ad4e;
+  }
+}
